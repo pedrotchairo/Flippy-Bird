@@ -115,7 +115,7 @@ function colidiu(passaro, barreiras) {
         if(!colidiu){
             const superior = parDeBarreiras.superior.elemento
             const inferior = parDeBarreiras.inferior.elemento
-            colidiu = estaoSobrepostos(passaro.elemento, superior || estaoSobrepostos(passaro.elemento, inferior))
+            colidiu = estaoSobrepostos(passaro.elemento, superior) || (estaoSobrepostos(passaro.elemento, inferior))
         }
     })
     return colidiu
